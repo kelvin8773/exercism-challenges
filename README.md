@@ -1,2 +1,7 @@
-# exercism-challenges
-Exercism.io Challenge Solutions Repo
+# Exercism Challenges
+
+Exercism.io Challenge Solutions
+
+## Note
+
+- Collections of my own solutions for Exercism.io's challenges.
