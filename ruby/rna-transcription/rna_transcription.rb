@@ -1,20 +1,17 @@
+DNA_MAP = {
+  "G" => "C",
+  "C" => "G",
+  "T" => "A",
+  "A" => "U",
+  "U" => "A"
+}
 module Complement 
   def self.of_dna(string)
-   string.chars.map do |x|
-    case x
-      when 'G'
-        x = 'C'
-      when 'C'
-        x = 'G'
-      when 'T'
-        x = 'A'
-      when 'A'
-        x = 'U'
-      when 'U'
-        x = 'A'
-    end
-  end.join('').to_s
-  
-  end
+    string.chars.map do |x|
+    x = DNA_MAP[x]
+    end.join
+  end 
 end
+
+
 

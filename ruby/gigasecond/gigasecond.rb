@@ -1,8 +1,8 @@
 module Gigasecond
-  @gigasecond = 10**9
+  GIGA_SECOND = 10**9
 
   def self.from(time)
-    time + @gigasecond
+    time + GIGA_SECOND
   end
 
 end
