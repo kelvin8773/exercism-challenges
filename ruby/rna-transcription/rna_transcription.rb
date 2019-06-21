@@ -1,17 +1,13 @@
-DNA_MAP = {
-  "G" => "C",
-  "C" => "G",
-  "T" => "A",
-  "A" => "U",
-  "U" => "A"
-}
 module Complement 
+  DNA_MAP = {
+    "G" => "C",
+    "C" => "G",
+    "T" => "A",
+    "A" => "U",
+    "U" => "A"
+  }
+
   def self.of_dna(string)
-    string.chars.map do |x|
-    x = DNA_MAP[x]
-    end.join
+    string.each_char.inject([]){ |res, x| res << DNA_MAP[x] }.join
   end 
 end
-
-
-

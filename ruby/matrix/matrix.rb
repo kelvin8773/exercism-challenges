@@ -1,18 +1,14 @@
 class Matrix
-  def initialize(input)
-    @input = input
+  def initialize(str_array)
+    @str_array = str_array
   end 
   
   def rows
-    @input.split("\n").map { |x| x.scan(/\d+/).map(&:to_i) }
+    @str_array.lines.map { |x| x.scan(/\d+/).map(&:to_i) }
   end
 
   def columns
-    rows = self.rows
-    rows[0].each_with_index.inject([]) do |result, (x, index)|
-      result << rows.reduce([]){|res, y| res << y[index]; res }
-      result
-   end
+    self.rows.transpose
   end
 end
 
